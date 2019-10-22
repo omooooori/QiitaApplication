@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>PropertyBindingPage.qml</file>
+        <file>MainPage.qml</file>
+        <file>LayoutPage.qml</file>
+        <file>MyHeader.qml</file>
+        <file>MyButton.qml</file>
+        <file>AnimationPage.qml</file>
+        <file>WebViewPage.qml</file>
+        <file>SplashPage.qml</file>
+        <file>ScreenTransitionModel.qml</file>
+        <file>BackgroundPage.qml</file>
+    </qresource>
+</RCC>
