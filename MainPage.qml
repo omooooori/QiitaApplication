@@ -70,5 +70,11 @@ Page {
             }
         }
 
+        ImageButton {
+            id: rockButton
+            source: "qrc:/images/Lock.svg"
+            maskSource: "qrc:/images/RoundMask.svg"
+        }
+
     }
 }

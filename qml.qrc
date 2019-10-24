@@ -11,5 +11,6 @@
         <file>SplashPage.qml</file>
         <file>ScreenTransitionModel.qml</file>
         <file>BackgroundPage.qml</file>
+        <file>ImageButton.qml</file>
     </qresource>
 </RCC>
