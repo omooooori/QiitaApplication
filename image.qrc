@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/headline-24px.svg</file>
+        <file>images/DotPicture.png</file>
+        <file>images/arrow_back-24px.svg</file>
+        <file>images/Lock.svg</file>
+        <file>images/RoundMask.svg</file>
+    </qresource>
+</RCC>
