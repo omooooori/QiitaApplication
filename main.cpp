@@ -32,9 +32,9 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     // For SplashShow
-    QQuickView viewer;
-    SplashShow* splash = new SplashShow(&viewer);
-    splash->start();
+    // QQuickView viewer;
+    // SplashShow* splash = new SplashShow(&viewer);
+    // splash->start();
     // For SplashShow
 
     // For QtWebView
@@ -47,9 +47,9 @@ int main(int argc, char *argv[])
     context->setContextProperty(QStringLiteral("initialUrl"), Utils::fromUserInput(initialUrl));
     // For QtWebView
 
-//    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-//    if (engine.rootObjects().isEmpty())
-//        return -1;
+    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    if (engine.rootObjects().isEmpty())
+        return -1;
 
     return app.exec();
 }
