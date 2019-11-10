@@ -31,12 +31,6 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
-    // For SplashShow
-    QQuickView viewer;
-    SplashShow* splash = new SplashShow(&viewer);
-    splash->start();
-    // For SplashShow
-
     // For QtWebView
     QtWebView::initialize();
     QCommandLineParser parser;
@@ -47,9 +41,15 @@ int main(int argc, char *argv[])
     context->setContextProperty(QStringLiteral("initialUrl"), Utils::fromUserInput(initialUrl));
     // For QtWebView
 
-//    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
-//    if (engine.rootObjects().isEmpty())
-//        return -1;
+    // For SplashShow on Windows Application
+   //  QQuickView viewer;
+    // SplashShow* splash = new SplashShow(&viewer);
+    // splash->start();
+    // For SplashShow
+
+    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    if (engine.rootObjects().isEmpty())
+        return -1;
 
     return app.exec();
 }
