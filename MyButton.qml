@@ -14,20 +14,20 @@ Rectangle {
 
     signal buttonClick()
 
-    Image {
-        id: image
-        sourceSize.width: 50
-        sourceSize.height: 50
-        fillMode: Image.PreserveAspectFit
-    }
+    Row {
 
-    Text {
-        id: text
-        wrapMode: Text.Wrap
-        anchors.left: image.right + 10;
-        anchors.right: parent.right
-        anchors.verticalCenter: parent.verticalCenter
-        font.pointSize: 25
+        Image {
+            id: image
+            sourceSize.width: 50
+            sourceSize.height: 50
+            fillMode: Image.PreserveAspectFit
+        }
+
+        Text {
+            id: text
+            wrapMode: Text.Wrap
+            font.pointSize: 25
+        }
     }
 
     MouseArea {

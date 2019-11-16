@@ -35,6 +35,20 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
     QQmlApplicationEngine engine;
 
+    // make local folder
+    QString appFolder(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/myappname");
+    QDir homePath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+    //check and create to the writable path
+    if (homePath.exists()){
+       homePath.mkdir("myappname");
+    }else{
+        QDir().mkpath(appFolder);
+    }
+    //just incase it was not created
+    if (!homePath.cd("myappname")){
+            homePath.mkpath("myappname");
+    }
+
     // For QtWebView
     QtWebView::initialize();
     QCommandLineParser parser;
