@@ -16,9 +16,9 @@ Page {
     focus: true
 
     Keys.onPressed: {
-        if (event.key == Qt.Key_Delete || event.key == Qt.Key_Backspace)
+        if (event.key === Qt.Key_Delete || event.key === Qt.Key_Backspace)
             root.remove()
-        else if (event.text != "") {
+        else if (event.text !== "") {
             root.append(event.text)
         }
     }

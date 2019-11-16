@@ -63,18 +63,19 @@ Page {
             Component.onCompleted: console.log("inside Repeater delegate. model = ", model)
 
             delegate: MyButton {
-                text: model.label
+                label: model.label
+                icon: model.icon
                 Layout.alignment: Qt.AlignHCenter
-                onClicked: model.label === "End" ? SplashShow.end() : root.StackView.view.push(model.path)
+                onButtonClick: model.label === "End" ? Qt.quit() : root.StackView.view.push(model.path)
                 Component.onCompleted: console.log("MyButton width = ", width + ", MyButton height = ",  height)
             }
         }
 
-        ImageButton {
-            id: rockButton
-            source: "qrc:/images/Lock.svg"
-            maskSource: "qrc:/images/RoundMask.svg"
-        }
+//        ImageButton {
+//            id: rockButton
+//            source: "qrc:/images/Lock.svg"
+//            maskSource: "qrc:/images/RoundMask.svg"
+//        }
 
     }
 }

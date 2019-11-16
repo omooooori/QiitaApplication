@@ -5,5 +5,10 @@
         <file>images/arrow_back-24px.svg</file>
         <file>images/Lock.svg</file>
         <file>images/RoundMask.svg</file>
+        <file>images/adb-24px.svg</file>
+        <file>images/build-24px.svg</file>
+        <file>images/camera_alt-24px.svg</file>
+        <file>images/lock-24px.svg</file>
+        <file>images/stop-24px.svg</file>
     </qresource>
 </RCC>
