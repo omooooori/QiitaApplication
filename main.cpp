@@ -3,6 +3,10 @@
 #include <QtQml/QQmlContext>
 #include <QQuickView>
 
+#ifdef Q_OS_ANDROID
+#include <QtSvg>    //Because deployment sometimes just forgets to include this lib otherwise
+#endif
+
 #include <QtCore/QUrl>
 #include <QtWebView/QtWebView>
 #include <QtCore/QCommandLineOption>

@@ -8,7 +8,17 @@ ToolBar {
 
     ToolButton {
         id: toolButton
-        icon.source: toolButtonIcon
+
+        Image {
+            source: toolButtonIcon
+            sourceSize.width: 30
+            sourceSize.height: 30
+            fillMode: Image.PreserveAspectFit
+            anchors.fill: parent
+            anchors.bottomMargin: 10
+        }
+
+//        icon.source: toolButtonIcon
         anchors.left: parent.left
         anchors.verticalCenter: parent.verticalCenter
         onClicked: toolButtonClicked()

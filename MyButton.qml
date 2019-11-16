@@ -16,6 +16,9 @@ Rectangle {
 
     Image {
         id: image
+        sourceSize.width: 50
+        sourceSize.height: 50
+        fillMode: Image.PreserveAspectFit
     }
 
     Text {
