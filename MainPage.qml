@@ -33,12 +33,8 @@ Page {
             }
 
             model: ListModel {
-                ListElement {
-                    text: qsTr("Open...")
-                }
-                ListElement {
-                    text: qsTr("About...")
-                }
+                ListElement { text: qsTr("Open...") }
+                ListElement { text: qsTr("About...") }
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }
@@ -65,7 +61,8 @@ Page {
             delegate: MyButton {
                 text: model.label
                 Layout.alignment: Qt.AlignHCenter
-                onClicked: model.label === "End" ? SplashShow.end() : root.StackView.view.push(model.path)
+//                onClicked: model.label === "End" ? SplashShow.end() : root.StackView.view.push(model.path)
+                onClicked: model.label === "End" ? Qt.quit() : root.StackView.view.push(model.path)
                 Component.onCompleted: console.log("MyButton width = ", width + ", MyButton height = ",  height)
             }
         }

@@ -26,6 +26,12 @@ Page {
         }
     ]
 
+    VideoOutput {
+        source: camera
+        anchors.fill: parent
+        focus : visible // to receive focus and capture key events when visible
+    }
+
     Camera {
         id: camera
         captureMode: Camera.CaptureStillImage
@@ -46,5 +52,4 @@ Page {
         visible: root.state == "PhotoPreview"
         focus: visible
     }
-
 }
