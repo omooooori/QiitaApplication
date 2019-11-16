@@ -10,6 +10,13 @@ Page {
         onToolButtonClicked: root.StackView.view.pop()
     }
 
+    focus:true
+    Keys.enabled: true
+    Keys.onBackPressed: {
+        console.log("back key")
+        root.StackView.view.pop()
+    }
+
     Button {
         id: button
         width: root.width / 2

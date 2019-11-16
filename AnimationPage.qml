@@ -9,12 +9,15 @@ Page {
         onToolButtonClicked: root.StackView.view.pop()
     }
 
-
     property string text: "This is Animation Page !!"
     property bool animated: true
+    focus:true
 
-    focus: true
-
+    Keys.enabled: true
+    Keys.onBackPressed: {
+        console.log("back key")
+        root.StackView.view.pop()
+    }
     Keys.onPressed: {
         if (event.key === Qt.Key_Delete || event.key === Qt.Key_Backspace)
             root.remove()

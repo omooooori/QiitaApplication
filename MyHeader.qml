@@ -18,7 +18,6 @@ ToolBar {
             anchors.bottomMargin: 10
         }
 
-//        icon.source: toolButtonIcon
         anchors.left: parent.left
         anchors.verticalCenter: parent.verticalCenter
         onClicked: toolButtonClicked()
