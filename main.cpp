@@ -12,6 +12,8 @@
 #include <QtCore/QCommandLineOption>
 #include <QtCore/QCommandLineParser>
 
+#include <QDebug>
+
 #include "SplashShow.h"
 
 class Utils : public QObject {
@@ -36,17 +38,19 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     // make local folder
-    QString appFolder(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/myappname");
+    QString appFolder(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/QiitaApplication");
     QDir homePath(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
     //check and create to the writable path
     if (homePath.exists()){
-       homePath.mkdir("myappname");
+       homePath.mkdir("QiitaApplication");
+       qDebug() << "make directory" << homePath;
     }else{
         QDir().mkpath(appFolder);
+        qDebug() << "make path" << appFolder;
     }
     //just incase it was not created
-    if (!homePath.cd("myappname")){
-            homePath.mkpath("myappname");
+    if (!homePath.cd("QiitaApplication")){
+            homePath.mkpath("QiitaApplication");
     }
 
     // For QtWebView

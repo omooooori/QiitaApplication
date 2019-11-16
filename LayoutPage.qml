@@ -10,6 +10,13 @@ Page {
         onToolButtonClicked: root.StackView.view.pop()
     }
 
+    focus:true
+    Keys.enabled: true
+    Keys.onBackPressed: {
+        console.log("back key")
+        root.StackView.view.pop()
+    }
+
     GridLayout {
         id: grid
         anchors.fill: parent
