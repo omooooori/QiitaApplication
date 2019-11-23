@@ -15,6 +15,7 @@
 #include <QDebug>
 
 #include "SplashShow.h"
+#include "CameraControl.h"
 
 class Utils : public QObject {
     Q_OBJECT
@@ -74,6 +75,9 @@ int main(int argc, char *argv[])
     // SplashShow* splash = new SplashShow(&viewer);
     // splash->start();
     // For SplashShow
+
+    // CameraControl
+    qmlRegisterType<CameraControl>("CameraControl", 1, 0, "CameraControl");
 
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())
