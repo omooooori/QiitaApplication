@@ -17,7 +17,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-    SplashShow.cpp
+    SplashShow.cpp \
+    CameraControl.cpp
 
 RESOURCES += qml.qrc \
     image.qrc
@@ -34,4 +35,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    SplashShow.h
+    SplashShow.h \
+    CameraControl.h
